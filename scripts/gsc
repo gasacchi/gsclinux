@@ -1,0 +1,16 @@
+#!/bin/bash
+
+# Check if trizen is installed on the system
+if ! command -v trize &> /dev/null
+then
+    echo "trizen is not installed on your system! gsc need trizen to run properly."
+    read -p "do you want to install it now?(y/n):" userinput
+    case $userinput in
+        [yY]*)
+          doas pacman -S trizen ;;
+        [nN]*) exit;;
+          *)
+          echo "wrong input!"
+          exit;;
+      esac
+fi
