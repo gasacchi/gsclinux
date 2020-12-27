@@ -1,7 +1,9 @@
 #!/bin/bash
 
+gsc_version="0.1.0"
+
 # Check if trizen is installed on the system
-if ! command -v trize &> /dev/null
+if ! command -v trizen &> /dev/null
 then
     echo "trizen is not installed on your system! gsc need trizen to run properly."
     read -p "do you want to install it now?(y/n):" userinput
@@ -14,3 +16,18 @@ then
           exit;;
       esac
 fi
+
+function resync () {
+  trizen -Sy
+}
+
+switch=$1
+
+case $switch in
+  "sync")
+    ./gsc-sync;;
+  "version")
+    echo "gsc - Pacman and Trizen layer 
+      version $gsc_version"
+esac
+
