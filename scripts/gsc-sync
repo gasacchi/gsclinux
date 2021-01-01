@@ -1,7 +1,0 @@
-#!/bin/bash
-
-# GSC Sync
-# update repo
-
-trizen -Sy
-exit
