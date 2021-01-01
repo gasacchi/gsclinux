@@ -1,5 +1,5 @@
 # GSCLinux 
-Void linux based distribution with some added features
+Void linux based distribution with some additional features
 
 ## Story
 I just want to learn linux and how it works, the best way to learn something is to build from scratch (just my humble opinion). I migrate to linux from windows since
