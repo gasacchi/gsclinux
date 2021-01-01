@@ -1,0 +1,8 @@
+# Don't print a new line at the start of the prompt
+add_newline = false
+
+[character]
+format = "$symbol[::](bold fg:#80E544)"
+success_symbol = "[  ](bold fg:#00C729)" 
+error_symbol = "[  ](bold fg:#E83151)"
+vicmd_symbol = "[  ](bold fg:#005200)"

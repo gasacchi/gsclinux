@@ -1,0 +1,7 @@
+{
+  "coc.preferences.formatOnSaveFiletypes": [
+    "rescript",
+    "rust"
+  ],
+  "rust-analyzer.serverPath": "/bin/rust-analyzer"
+}

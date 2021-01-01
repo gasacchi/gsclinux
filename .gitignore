@@ -3,15 +3,17 @@
 target/
 Cargo.lock/
 fonts/
-./.config/nvim/autoload
-./.config/nvim/plugged
-.config/chromium
-./.config/vlc
-./.config/pulse
-./.config/procps
-./.config/gtk-3.0
-./.config/glib-2.0
-
+chromium/
+coc/
+bottom/
+glib-2.0/
+gtk-3.0/
+procps/
+vlc/
+pulse/
+autoload/
+plugged/
 
 
 kernelbuild/
+.netrwhist
