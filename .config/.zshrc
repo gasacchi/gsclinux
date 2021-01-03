@@ -37,6 +37,7 @@ alias du='dust'
 alias top='btm'
 alias loc='tokei'
 alias cat='bat'
+alias sed='sd'
 
 alias anime='cd ~/xxx/.anime/.safe'
 alias gsclinux='cd ~/xxx/.dev/gsclinux'

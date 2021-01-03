@@ -24,17 +24,20 @@ static const unsigned int gappx             = 5;        /* gaps between windows 
 static const unsigned int snap              = 32;       /* snap pixel */
 static const int showbar                    = 1;        /* 0 means no bar */
 static const int topbar                     = 1;        /* 0 means bottom bar */
-static const char *fonts[]                  = { "JetBrainsMono Nerd Font:size=9" };
-static const char dmenufont[]               = "JetBrainsMono Nerd Font:size=9";
+static const char *fonts[]                  = {
+  "Fira Code iScript:size=9",
+  "JetBrainsMono Nerd Font:size=9",
+};
+static const char dmenufont[]               = "Fira Code iScript:size=9";
 /* background color */
-static const char col_bg[]                  = "#0A0E14"; 
+static const char col_bg[]                  = "#0D1117"; 
 /* inactive border color */
-static const char col_border_inactive[]     = "#686868";
+static const char col_border_inactive[]     = "#1D2021";
 /* font color */
-static const char col_fg[]                  = "#59C2FF"; 
+static const char col_fg[]                  = "#8EC07C"; 
 
 /* top bar second color */
-static const char col_bg_second[]           = "#59C2FF"; 
+static const char col_bg_second[]           = "#8EC07C"; 
 static const char *colors[][3]              = {
   /*               fg         bg         border   */
   [SchemeNorm] = { col_fg, col_bg, col_border_inactive },
@@ -51,10 +54,10 @@ static const Rule rules[] = {
 */
   /* class      instance    title       tags mask     isfloating   monitor */
   /* { "Gimp",     NULL,       NULL,       0,            1,           -1 }, */
-  { "Brave-browser-beta",  NULL,       NULL,       1 << 1,       0,           -1 },
+  { "Chromium",  NULL,       NULL,       1 << 1,       0,           -1 },
   { "obs",  NULL,       NULL,       1 << 2,       0,           -1 },
   { "kdenlive",  NULL,       NULL,       1 << 2,       0,           -1 },
-  { "vlc",  NULL,       NULL,       1 << 3,       0,           -1 },
+  { "vlc",  NULL,       NULL,       1 << 2,       0,           -1 },
 
   /* if there is no rule for app */
   /* { NULL,       NULL,       NULL,       0,            False,       -1 }, */
@@ -151,7 +154,7 @@ static Key keys[] = {
 
   /* app launch */
   /* { MODKEY,                       XK_s,                                spawn,                     SHCMD("st -e alsamixer") }, */
-  { MODKEY,                       XK_w,                                spawn,                     SHCMD("brave-beta") },
+  { MODKEY,                       XK_w,                                spawn,                     SHCMD("chromium") },
 
 
 };

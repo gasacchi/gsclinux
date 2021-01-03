@@ -1,4 +1,5 @@
 fn main() {
-    println!("Hello, world!");
-    println!("heloo too")
+    let pattern = std::env::args();
+
+    println!("{:?}", pattern.inner);
 }
