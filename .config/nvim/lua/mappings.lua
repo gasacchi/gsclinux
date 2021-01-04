@@ -39,13 +39,14 @@ keymap('i', 'nn', '<ESC>', opts)
 keymap('c', 'nn', '<C-c>', opts)
 
 -- Map Leader to space 
+local which_map_opts = { noremap = true, silent = true }
 g.mapleader = ' '
-keymap('n', '<Leader>', ":silent WhichKey '<Space>'<CR>", opts)
+keymap('n', '<Leader>', ":silent WhichKey '<Space>'<CR>", which_map_opts)
 keymap(
   'v',
   '<Leader>',
   ":silent <C-u> :silent WhichKeyVisual '<Space>'<CR>",
-  opts
+  which_map_opts
 )
 
 -- ----------------------------------------------------------------------------
@@ -153,4 +154,4 @@ cmd('call which_key#register(" ", "g:which_key_map")')
 
 -- ----------------------------------------------------------------------------
 -- EOF
-
+-- ----------------------------------------------------------------------------
