@@ -44,5 +44,4 @@ alias gsclinux='cd ~/xxx/.dev/gsclinux'
 alias youtube='cd ~/xxx/.dev/youtube'
 export EDITOR='nvim'
 
-
 # End of lines added by compinstall

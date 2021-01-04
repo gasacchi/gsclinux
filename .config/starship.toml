@@ -3,6 +3,6 @@ add_newline = false
 
 [character]
 format = "$symbol[::](bold fg:#80E544)"
-success_symbol = "[  ](bold fg:#00C729)" 
-error_symbol = "[  ](bold fg:#E83151)"
-vicmd_symbol = "[  ](bold fg:#005200)"
+success_symbol = "[  ](bold fg:#8ec07c)" 
+error_symbol = "[  ](bold fg:#fb4934)"
+vicmd_symbol = "[  ](bold fg:#b8bb26)"
