@@ -6,44 +6,46 @@
 -- paq-nvim Setup
 -- ---------------------------------------
 -- Load the package manager
-vim.cmd 'packadd paq-nvim'
--- Import module and bind to paq function
-local paq = require'paq-nvim'.paq
+vim.cmd 'packadd packer.nvim'
 
 -- --------------------------------------
 -- Plugins List
 -- --------------------------------------
--- paq-nvim manages itself
-paq {'savq/paq-nvim', opt = true }
 
--- ZEN goyo
-paq { 'junegunn/goyo.vim' }
+return require('packer').startup(function()
+  -- Packer can manage itself as an optional plugin
+  use {'wbthomason/packer.nvim', opt = true}
 
--- Vim Commentary
-paq { 'tpope/vim-commentary' }
+  -- ZEN goyo
+  use 'junegunn/goyo.vim'
 
--- Vim Diff Sign
-paq { 'mhinz/vim-signify' }
+  -- Vim Commentary
+  use 'tpope/vim-commentary'
 
--- Vim Which key
-paq { 'liuchengxu/vim-which-key' }
+  -- Vim Diff Sign
+  use 'mhinz/vim-signify'
 
--- Vim easy motion
-paq { 'easymotion/vim-easymotion' }
+  -- Vim Which key
+  use 'liuchengxu/vim-which-key'
 
--- Vim Surround
-paq { 'tpope/vim-surround' }
+  -- Vim easy motion
+  use 'easymotion/vim-easymotion'
 
--- FZF
-paq { 'junegunn/fzf', hook = vim.fn['fzf#install'] }
-paq { 'junegunn/fzf.vim' }
+  -- Vim Surround
+  use 'tpope/vim-surround'
 
--- Git
-paq { 'tpope/vim-fugitive' }
+  -- FZF
+  use 'junegunn/fzf' 
+  use 'junegunn/fzf.vim'
 
--- Lightline & Bufferline
-paq { 'itchyny/lightline.vim' }
-paq { 'mengelbrecht/lightline-bufferline' }
+  -- Git
+  use 'tpope/vim-fugitive'
 
--- Gruvbox8
-paq { 'lifepillar/vim-gruvbox8' }
+  -- Lightline & Bufferline
+  use 'itchyny/lightline.vim'
+  use 'mengelbrecht/lightline-bufferline'
+
+  -- Gruvbox8
+  use 'lifepillar/vim-gruvbox8'
+  
+  end)
