@@ -2,11 +2,11 @@
 -- UI
 -- ----------------------------------------------------------------------------
 
-local g = vim.g
+local o = vim.g
 local cmd = vim.cmd
 
 -- true color support
-g.termguicolors = true
+o.termguicolors = true
 
 cmd('colorscheme gruvbox8_hard')
 

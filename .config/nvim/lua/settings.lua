@@ -49,9 +49,13 @@ o.smartcase = true
 
 -- Tabs
 bo.tabstop = 2
+o.tabstop = 2
 bo.softtabstop = 0
+o.softtabstop = 0
 bo.shiftwidth = 2
+o.shiftwidth = 2
 bo.expandtab = true
+o.expandtab = true
 
 -- ----------------------------------------------------------------------------
 -- Window Scope

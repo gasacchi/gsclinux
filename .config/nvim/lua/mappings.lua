@@ -8,6 +8,7 @@ local opts = { noremap = true }
 
 local g = vim.g
 local cmd = vim.cmd
+local var = vim.api.nvim_set_var
 
 
 -- Disable Arrow keys
@@ -146,7 +147,7 @@ map.s   = {
 
 
 -- Set vim global variable
-vim.api.nvim_set_var('which_key_map', map)
+var('which_key_map', map)
 
 
 -- Register WhichKey

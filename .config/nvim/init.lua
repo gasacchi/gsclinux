@@ -7,7 +7,6 @@ require("plugins")
 
 -- Plugins spesific config
 require("plugins.fzf")
-require("plugins.goyo")
 require("plugins.lightline")
 require("plugins.whichkey")
 
