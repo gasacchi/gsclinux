@@ -35,9 +35,14 @@ return require('packer').startup(function()
   use 'junegunn/fzf' 
   use 'junegunn/fzf.vim'
 
-  -- Lightline & Bufferline
-  use 'itchyny/lightline.vim'
-  use 'mengelbrecht/lightline-bufferline'
+  -- Lualine 
+  use {
+  'hoob3rt/lualine.nvim',
+  requires = {'kyazdani42/nvim-web-devicons', opt = true}
+  }
+
+  -- Bufferline
+  use 'akinsho/nvim-bufferline.lua'
 
   -- Gruvbox8
   use 'lifepillar/vim-gruvbox8'
