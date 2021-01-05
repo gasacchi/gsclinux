@@ -38,6 +38,7 @@ alias top='btm'
 alias loc='tokei'
 alias cat='bat'
 alias sed='sd'
+alias lgit='lazygit'
 
 alias anime='cd ~/xxx/.anime/.safe'
 alias gsclinux='cd ~/xxx/.dev/gsclinux'
