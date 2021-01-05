@@ -8,7 +8,8 @@ local cmd = vim.cmd
 -- true color support
 o.termguicolors = true
 
-cmd('colorscheme gruvbox8_hard')
+require("colorbuddy").colorscheme("gruvbox")
+
 
 cmd('highlight Normal guibg=NONE ctermbg=NONE')
 

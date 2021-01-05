@@ -16,6 +16,15 @@ return require('packer').startup(function()
   -- Packer can manage itself as an optional plugin
   use {'wbthomason/packer.nvim', opt = true}
 
+  -- Neovim lsp
+  use 'neovim/nvim-lspconfig'
+
+  -- Completions
+  use 'nvim-lua/completion-nvim'
+
+  -- Tree
+  use 'kyazdani42/nvim-tree.lua'
+
   -- Vim Commentary
   use 'tpope/vim-commentary'
 
@@ -44,7 +53,7 @@ return require('packer').startup(function()
   -- Bufferline
   use 'akinsho/nvim-bufferline.lua'
 
-  -- Gruvbox8
-  use 'lifepillar/vim-gruvbox8'
-  
+  -- gruvbox lua
+  use {"npxbr/gruvbox.nvim", requires = {"tjdevries/colorbuddy.vim"}}
+
   end)

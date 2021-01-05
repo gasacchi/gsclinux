@@ -1,5 +1,7 @@
 fn main() {
-    let pattern = std::env::args();
+  let _a: u128  = 234;
+  println!("hello world");
 
-    println!("{:?}", pattern.inner);
+  return () 
+
 }

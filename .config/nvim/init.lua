@@ -11,6 +11,8 @@ require("plugins.lualine")
 require("plugins.whichkey")
 require("plugins.bufferline")
 
+require("lsp")
+
 
 -- Mapping
 require("mappings")

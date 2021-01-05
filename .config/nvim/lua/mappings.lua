@@ -35,9 +35,9 @@ keymap('n', '<M-h>', ':vertical resize -2<CR>', opts)
 keymap('n', '<M-l>', ':vertical resize +2<CR>', opts)
 
 -- Esc to nn
-keymap('i', 'nn', '<ESC>', opts)
+keymap('i', 'ee', '<ESC>', opts)
 -- Escape from command mode with nn
-keymap('c', 'nn', '<C-c>', opts)
+keymap('c', 'ee', '<C-c>', opts)
 
 -- Map Leader to space 
 local which_map_opts = { noremap = true, silent = true }
@@ -114,17 +114,16 @@ map.m   = {
 }
 
 
--- " Plug Mapping
--- let g:which_key_map.p = {
-      -- \ 'name': '[]plugin',
-      -- \ ' ': ['<Esc>', ' close'],
-      -- \ 's': [':PlugStatus', ' show status'],
-      -- \ 'd': [':PlugDiff', ' show diff'],
-      -- \ 'c': [':PlugClean', 'ﮤ clean plugin(s)'],
-      -- \ 'i': [':PlugInstall', 'ﮣ install plugin(s)'],
-      -- \ 'u': [':PlugUpdate', 'ﮮ updated plugin(s)'],
-      -- \ 'U': [':PlugUpgrade', ' self upgrade'],
-      -- \}
+-- Plugin Mapping
+map.p = {
+  name    = '[]plugin',
+  [' '] = { '<Esc>', ' close' },
+  C     = { ':PackerComplie', ' Complie plugin(s)' },
+  c     = { ':PackerClean', 'ﮤ clean plugin(s)' },
+  i     = { ':PackerInstall', 'ﮣ install plugin(s)' },
+  u     = { ':PackerUpdate', 'ﮮ updated plugin(s)' },
+  s     = { ':PackerSync', ' Sync plugin(s)' },
+}
 
 -- Search Mapping
 keymap('n', '<Leader>sb', ':buffers<SPACE>', opts)
