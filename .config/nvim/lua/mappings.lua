@@ -35,9 +35,9 @@ keymap('n', '<M-h>', ':vertical resize -2<CR>', opts)
 keymap('n', '<M-l>', ':vertical resize +2<CR>', opts)
 
 -- Esc to nn
-keymap('i', 'ee', '<ESC>', opts)
+keymap('i', 'kk', '<ESC>', opts)
 -- Escape from command mode with nn
-keymap('c', 'ee', '<C-c>', opts)
+keymap('c', 'kk', '<C-c>', opts)
 
 -- Map Leader to space 
 local which_map_opts = { noremap = true, silent = true }
@@ -63,6 +63,7 @@ map['/'] =  { ':Commentary', '[ﱕ]toggle comment' }
 map['h'] =  { ':let @/ = ""', '[]no highlight search' }
 map['q'] =  { ':q', '[]quit' }
 map['Q'] =  { ':q!', '[]quit without saving' }
+map['g'] =  { ':LazyGit', '[] open lazygit'}
 
 -- Buffer Mapping
 keymap('n', '<Leader>bD', ':bdelete<Space>', opts) 

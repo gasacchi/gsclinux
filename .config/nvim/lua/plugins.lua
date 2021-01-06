@@ -44,6 +44,9 @@ return require('packer').startup(function()
   use 'junegunn/fzf' 
   use 'junegunn/fzf.vim'
 
+  -- Lazygit
+  use 'kdheepak/lazygit.nvim'
+
   -- Lualine 
   use {
   'hoob3rt/lualine.nvim',
@@ -55,5 +58,7 @@ return require('packer').startup(function()
 
   -- gruvbox lua
   use {"npxbr/gruvbox.nvim", requires = {"tjdevries/colorbuddy.vim"}}
+
+  use 'rescript-lang/vim-rescript'
 
   end)

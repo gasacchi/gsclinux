@@ -12,6 +12,9 @@ vlc/
 pulse/
 autoload/
 plugged/
+yarn/
+configstore/
+lazygit/
 
 
 kernelbuild/
