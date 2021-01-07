@@ -24,6 +24,9 @@ o.encoding ='utf-8'
 -- The encoding written to file
 o.fileencoding ='utf-8'
 
+-- Auto chdir 
+o.autochdir = true
+
 -- abandon hidden buffer when unloading
 o.hidden = true
 
