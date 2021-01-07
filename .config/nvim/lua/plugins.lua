@@ -59,6 +59,9 @@ return require('packer').startup(function()
   -- gruvbox lua
   use {"npxbr/gruvbox.nvim", requires = {"tjdevries/colorbuddy.vim"}}
 
+  -- colorizer lua
+  use 'norcalli/nvim-colorizer.lua'
+
   use 'rescript-lang/vim-rescript'
 
   end)
