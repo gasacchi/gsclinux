@@ -1,6 +1,7 @@
 lastupdatecheck: 0
 recentrepos:
 - /home/gasacchi/xxx/.dev/gsclinux
+- /home/gasacchi/xxx/.dev/clone/lua-language-server
 - /home/gasacchi/xxx/.dev/clone/neovide
 - /home/gasacchi/xxx/.dev/github/yuno.nvim
 startuppopupversion: 3
