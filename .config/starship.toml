@@ -13,5 +13,8 @@ format = "via [](bold fg:#0000ff) [$version](bold blue)"
 [rust]
 format = "via [ $version](red bold)"
 
+[crystal]
+format = "via [ $version](black bold)"
+
 [package]
 format = "via [ $version](208 bold) "
