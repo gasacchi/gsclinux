@@ -16,7 +16,7 @@ source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 # Rust
 export PATH=~/.cargo/bin:$PATH
 # Yarn
-export PATH="`yarn global bin`:$PATH"
+export PATH="$(yarn global bin):$PATH"
 
 
 eval "$(starship init zsh)"
