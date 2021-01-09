@@ -1,4 +1,4 @@
-# Lines configured by zsh-newuser-install
+#Lines configured by zsh-newuser-install
 HISTFILE=~/.histfile
 HISTSIZE=1000
 SAVEHIST=1000
@@ -15,6 +15,8 @@ source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 
 # Rust
 export PATH=~/.cargo/bin:$PATH
+# Yarn
+export PATH="`yarn global bin`:$PATH"
 
 
 eval "$(starship init zsh)"
@@ -45,4 +47,3 @@ alias gsclinux='cd ~/xxx/.dev/gsclinux'
 alias youtube='cd ~/xxx/.dev/youtube'
 export EDITOR='nvim'
 
-# End of lines added by compinstall
