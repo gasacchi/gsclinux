@@ -2,16 +2,16 @@
 -- UI
 -- ----------------------------------------------------------------------------
 
-local o = vim.g
 local cmd = vim.cmd
 
 -- true color support
-o.termguicolors = true
+cmd("set termguicolors")
 
-require("colorbuddy").colorscheme("gruvbox")
+-- colorizer lua
+require'colorizer'.setup()
 
 
-cmd('highlight Normal guibg=NONE ctermbg=NONE')
+-- cmd('highlight Normal guibg=NONE ctermbg=NONE')
 
 
 -- ----------------------------------------------------------------------------

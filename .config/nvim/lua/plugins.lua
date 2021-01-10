@@ -56,8 +56,6 @@ return require('packer').startup(function()
   -- Bufferline
   use 'akinsho/nvim-bufferline.lua'
 
-  -- gruvbox lua
-  use {"npxbr/gruvbox.nvim", requires = {"tjdevries/colorbuddy.vim"}}
 
   -- colorizer lua
   use 'norcalli/nvim-colorizer.lua'
