@@ -72,6 +72,7 @@ o.expandtab = true
 wo.colorcolumn = '80'
 -- Set relative number
 wo.relativenumber = true
+wo.number = true
 -- Visual Settings
 wo.cursorline = true
 wo.cursorcolumn = true
