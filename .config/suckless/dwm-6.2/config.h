@@ -30,14 +30,14 @@ static const char *fonts[]                  = {
 };
 static const char dmenufont[]               = "Fira Code iScript:size=9";
 /* background color */
-static const char col_bg[]                  = "#0D1117"; 
+static const char col_bg[]                  = "#0D070D"; 
 /* inactive border color */
-static const char col_border_inactive[]     = "#1D2021";
+static const char col_border_inactive[]     = "#1B0E1B";
 /* font color */
-static const char col_fg[]                  = "#8EC07C"; 
+static const char col_fg[]                  = "#FB9DF8"; 
 
 /* top bar second color */
-static const char col_bg_second[]           = "#8EC07C"; 
+static const char col_bg_second[]           = "#FB9DF8"; 
 static const char *colors[][3]              = {
   /*               fg         bg         border   */
   [SchemeNorm] = { col_fg, col_bg, col_border_inactive },
