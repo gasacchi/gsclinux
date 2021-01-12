@@ -5,17 +5,11 @@
   "license": "MIT",
   "esy": {
     "build": "dune build -p #{self.name}",
-    "buildDev": "refmterr dune build --promote-install-files --root . --only-package #{self.name}",
+    "buildDev":
+      "refmterr dune build --promote-install-files --root . --only-package #{self.name}",
     "NOTE": "Optional release Section. Customizes result of `esy release`",
-    "release": {
-      "rewritePrefix": true,
-      "bin": [
-        "Gsc"
-      ]
-    },
-    "buildEnv": {
-      "ODOC_SYNTAX": "re"
-    }
+    "release": { "rewritePrefix": true, "bin": [ "Gsc" ] },
+    "buildEnv": { "ODOC_SYNTAX": "re" }
   },
   "scripts": {
     "test": "esy x Gsc",
@@ -31,8 +25,9 @@
   },
   "devDependencies": {
     "@opam/merlin": "*",
+    "@opam/ocaml-lsp-server": "1.4.0",
+    "@opam/odoc": "*",
     "@reason-native/rely": "*",
-    "refmterr": "*",
-    "@opam/odoc": "*"
+    "refmterr": "*"
   }
 }
