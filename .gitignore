@@ -30,3 +30,13 @@ nitrogen/
 
 kernelbuild/
 .netrwhist
+
+# ReasonML
+.merlin
+node_modules/
+_build
+_esy
+_release
+*.byte
+*.native
+*.install
