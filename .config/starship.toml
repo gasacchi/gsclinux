@@ -7,6 +7,9 @@ success_symbol = "[  ](bold fg:#8ec07c)"
 error_symbol = "[  ](bold fg:#fb4934)"
 vicmd_symbol = "[  ](bold fg:#b8bb26)"
 
+[package]
+format = "via [ $version](208 bold) "
+
 [lua]
 format = "via [](bold fg:#0000ff) [$version](bold blue)"
 
@@ -16,5 +19,5 @@ format = "via [ $version](red bold)"
 [crystal]
 format = "via [ $version](black bold)"
 
-[package]
-format = "via [ $version](208 bold) "
+[ocaml]
+format = "via [ $version](208 bold) "
