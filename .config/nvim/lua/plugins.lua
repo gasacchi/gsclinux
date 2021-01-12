@@ -60,6 +60,7 @@ return require('packer').startup(function()
   -- colorizer lua
   use 'norcalli/nvim-colorizer.lua'
 
+  use 'reasonml-editor/vim-reason-plus'
   use 'rescript-lang/vim-rescript'
 
   end)

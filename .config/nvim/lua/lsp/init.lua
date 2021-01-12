@@ -3,13 +3,17 @@
 -- ----------------------------------------------------------------------------
 
 -- ----------------------------------------------------------------------------
--- Crytal LSP Config
+-- Lua LSP Config
 -- ----------------------------------------------------------------------------
 local sumneko_root_path =  '/home/gasacchi/xxx/.dev/clone/lua-language-server'
 local sumneko_binary = sumneko_root_path.."/bin/Linux/lua-language-server"
 
+
+local custom_attach = require'completion'.on_attach
+
+
 require'lspconfig'.sumneko_lua.setup {
-  on_attach = require'completion'.on_attach,
+  on_attach = custom_attach,
     cmd = {sumneko_binary, "-E", sumneko_root_path .. "/main.lua"};
   settings = {
     Lua = {
@@ -33,6 +37,12 @@ require'lspconfig'.sumneko_lua.setup {
     },
   },
 }
+
+-- ----------------------------------------------------------------------------
+-- Reason/Ocaml LSP Config
+-- ----------------------------------------------------------------------------
+require'lspconfig'.ocamllsp.setup{on_attach=custom_attach}
+
 
 -- Enable diagnostics
 vim.lsp.handlers["textDocument/publishDiagnostics"] = vim.lsp.with(
