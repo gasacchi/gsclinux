@@ -16,6 +16,7 @@ coc/
 bottom/
 glib-2.0/
 gtk-3.0/
+gtk-2.0/
 procps/
 vlc/
 pulse/
