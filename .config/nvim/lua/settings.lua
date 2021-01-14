@@ -1,5 +1,5 @@
 -- ---------------------------------------------------------------------------
--- Basic settings 
+-- Basic settings
 -- ---------------------------------------------------------------------------
 
 -- ---------------------------------------------------------------------------
@@ -18,13 +18,14 @@ local cmd = vim.cmd
 -- Global Scope
 -- ----------------------------------------------------------------------------
 
+o.guicursor= ''
 -- Encoding
 -- The encoding displayed
-o.encoding ='utf-8' 
+o.encoding ='utf-8'
 -- The encoding written to file
 o.fileencoding ='utf-8'
 
--- Auto chdir 
+-- Auto chdir
 o.autochdir = true
 
 -- abandon hidden buffer when unloading
@@ -76,6 +77,8 @@ wo.number = true
 -- Visual Settings
 wo.cursorline = true
 wo.cursorcolumn = true
+wo.wrap = false
+wo.scrolloff = 8
 
 -- ----------------------------------------------------------------------------
 -- Commands

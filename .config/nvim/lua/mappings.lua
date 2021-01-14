@@ -1,4 +1,4 @@
--- ----------------------------------------------------------------------------
+----------------------------------------------------------------------------
 -- Mappings
 -- ----------------------------------------------------------------------------
 
@@ -9,6 +9,7 @@ local opts = { noremap = true }
 local g = vim.g
 local cmd = vim.cmd
 local var = vim.api.nvim_set_var
+
 
 
 -- Disable Arrow keys
@@ -54,12 +55,18 @@ keymap(
 -- WhichKey Mapping 
 -- ----------------------------------------------------------------------------
 
+-- temp mapping
+cmd([[function! SynGroup()                                                            
+    let l:s = synID(line('.'), col('.'), 1)                                       
+    echo synIDattr(l:s, 'name') . ' -> ' . synIDattr(synIDtrans(l:s), 'name')
+endfun]])
+keymap('n', '<Leader>c', ':call SynGroup()<CR>', opts)
 
 local map = {}
 
 -- Single Mapping
 map[' '] =  { '<Esc>', ' close' }
-map['/'] =  { ':Commentary', '[ﱕ]toggle comment' }
+map['/'] =  { ':Commentary', '[ﱕ] comment' }
 map['h'] =  { ':let @/ = ""', '[]no highlight search' }
 map['q'] =  { ':q', '[]quit' }
 map['Q'] =  { ':q!', '[]quit without saving' }
