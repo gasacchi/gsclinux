@@ -100,6 +100,23 @@ map.f   = {
 
 -- LSP
 map.l   = {
+  name  = 'lsp',
+  D     = 'declaration',
+  d     = 'definition',
+  h     = 'hover',
+  i     = 'implementation',
+  s     = 'signature help',
+  a     = 'add workspace folder',
+  R     = 'remove workspace folder',
+  l     = 'list workspace folder',
+  t     = 'type definition',
+  r     = 'rename',
+  F     = 'references',
+  e     = 'show line diagnostics',
+  p     = 'go to previous',
+  n     = 'go to next',
+  q     = 'set loc list',
+  f     = 'format',
 }
 -- Motion (easy motio)
 map.m   = {
