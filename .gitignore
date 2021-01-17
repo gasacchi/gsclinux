@@ -26,7 +26,8 @@ yarn/
 configstore/
 lazygit/
 obs-studio/
-nitrogen/
+nitrogen/**
+nextjs-nodejs/
 
 
 kernelbuild/
