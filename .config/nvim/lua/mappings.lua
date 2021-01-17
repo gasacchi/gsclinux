@@ -98,6 +98,15 @@ map.f   = {
 -- \ 'x': [':CocCommand explorer', '况open explorer'],
 }
 
+-- LSP
+map.l   = {
+}
+-- Motion (easy motio)
+map.m   = {
+  name  = '[ﮙ]motion',
+  [' '] = { '<Esc>', ' close' },
+  f     = { '<Plug>(easymotion-f)', 'ﮜ char forward' },
+}
 -- Motion (easy motio)
 map.m   = {
   name  = '[ﮙ]motion',
