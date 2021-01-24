@@ -47,3 +47,4 @@ alias gsclinux='cd ~/xxx/.dev/gsclinux'
 alias youtube='cd ~/xxx/.dev/youtube'
 export EDITOR='nvim'
 
+export PATH="/home/gasacchi/.bin:/home/gasacchi/.yarn/bin:/home/gasacchi/.cargo/bin:/home/gasacchi/.yarn/bin:/home/gasacchi/.cargo/bin:/usr/local/bin:/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/sbin"

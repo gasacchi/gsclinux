@@ -55,14 +55,16 @@ o.showmode = false
 -- ----------------------------------------------------------------------------
 
 -- Tabs
-bo.tabstop = 2
-o.tabstop = 2
+bo.tabstop = 4
+o.tabstop = 4
 bo.softtabstop = 0
 o.softtabstop = 0
-bo.shiftwidth = 2
-o.shiftwidth = 2
+bo.shiftwidth = 4
+o.shiftwidth = 4
 bo.expandtab = true
 o.expandtab = true
+bo.swapfile = false
+o.swapfile = false
 
 -- ----------------------------------------------------------------------------
 -- Window Scope
