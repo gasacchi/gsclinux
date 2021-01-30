@@ -17,6 +17,8 @@ source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 export PATH=~/.cargo/bin:$PATH
 # Yarn
 export PATH="$(yarn global bin):$PATH"
+export PATH="$HOME/.local/.bin:$PATH"
+export PATH="$HOME/.emacs.d/bin:$PATH"
 
 
 eval "$(starship init zsh)"
@@ -29,7 +31,7 @@ alias lla="ls -la"
 alias gscadd="doas xbps-install -Sy"
 alias gscsearch="xbps-query -Rs"
 alias gscdel="doas xbps-remove -R"
-alias v='nvim'
+alias v='neovide --multiGrid'
 
 # Rust utility
 alias cp='cp -v'
@@ -47,4 +49,3 @@ alias gsclinux='cd ~/xxx/.dev/gsclinux'
 alias youtube='cd ~/xxx/.dev/youtube'
 export EDITOR='nvim'
 
-export PATH="/home/gasacchi/.bin:/home/gasacchi/.yarn/bin:/home/gasacchi/.cargo/bin:/home/gasacchi/.yarn/bin:/home/gasacchi/.cargo/bin:/usr/local/bin:/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/sbin"

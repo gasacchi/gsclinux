@@ -3,14 +3,8 @@
 target/
 Cargo.lock/
 
-### Crystal ###
-docs/
-lib/
-bin/
-.shards/
-*.dwarf
 
-
+fonts/
 chromium/
 coc/
 bottom/

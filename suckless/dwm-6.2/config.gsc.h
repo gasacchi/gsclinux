@@ -25,10 +25,9 @@ static const unsigned int snap              = 32;       /* snap pixel */
 static const int showbar                    = 1;        /* 0 means no bar */
 static const int topbar                     = 1;        /* 0 means bottom bar */
 static const char *fonts[]                  = {
-  "Fira Code iScript:size=9",
-  "JetBrainsMono Nerd Font:size=9",
+  "Hasklug Nerd Font:size=9",
 };
-static const char dmenufont[]               = "Fira Code iScript:size=9";
+static const char dmenufont[]               = "Hasklug Nerd Font:size=9";
 /* background color */
 static const char col_bg[]                  = "#0D070D"; 
 /* inactive border color */

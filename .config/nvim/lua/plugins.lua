@@ -22,11 +22,18 @@ return require('packer').startup(function()
   -- Completions
   use 'nvim-lua/completion-nvim'
 
+  use {
+      'nvim-telescope/telescope.nvim',
+      requires = {{'nvim-lua/popup.nvim'}, {'nvim-lua/plenary.nvim'}}
+  }
   -- Tree
   use 'kyazdani42/nvim-tree.lua'
 
   -- Vim Commentary
   use 'tpope/vim-commentary'
+
+  -- Auto Pairs
+  use 'jiangmiao/auto-pairs'
 
   -- Vim Diff Sign
   use 'mhinz/vim-signify'
@@ -40,14 +47,10 @@ return require('packer').startup(function()
   -- Vim Surround
   use 'tpope/vim-surround'
 
-  -- FZF
-  use 'junegunn/fzf' 
-  use 'junegunn/fzf.vim'
-
   -- Lazygit
   use 'kdheepak/lazygit.nvim'
 
-  -- Lualine 
+  -- Lualine
   use {
   'hoob3rt/lualine.nvim',
   requires = {'kyazdani42/nvim-web-devicons', opt = true}
@@ -56,8 +59,10 @@ return require('packer').startup(function()
   -- Bufferline
   use 'akinsho/nvim-bufferline.lua'
 
-
   -- colorizer lua
   use 'norcalli/nvim-colorizer.lua'
+
+  -- Haskell
+  use 'neovimhaskell/haskell-vim'
 
   end)

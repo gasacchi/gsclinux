@@ -11,7 +11,7 @@ local cmd = vim.cmd
 g.which_key_use_floating_win = 0
 
 -- Define a separator
-g.which_key_sep = '↔'
+g.which_key_sep = '::'
 
 -- Hide status
 cmd("autocmd! FileType which_key")

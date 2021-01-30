@@ -40,7 +40,7 @@ keymap('i', 'kk', '<ESC>', opts)
 -- Escape from command mode with nn
 keymap('c', 'kk', '<C-c>', opts)
 
--- Map Leader to space 
+-- Map Leader to space
 local which_map_opts = { noremap = true, silent = true }
 g.mapleader = ' '
 keymap('n', '<Leader>', ":silent WhichKey '<Space>'<CR>", which_map_opts)
@@ -52,7 +52,7 @@ keymap(
 )
 
 -- ----------------------------------------------------------------------------
--- WhichKey Mapping 
+-- WhichKey Mapping
 -- ----------------------------------------------------------------------------
 
 -- temp mapping
@@ -65,73 +65,79 @@ keymap('n', '<Leader>c', ':call SynGroup()<CR>', opts)
 local map = {}
 
 -- Single Mapping
-map[' '] =  { '<Esc>', ' close' }
-map['/'] =  { ':Commentary', '[ﱕ] comment' }
-map['h'] =  { ':let @/ = ""', '[]no highlight search' }
-map['q'] =  { ':q', '[]quit' }
-map['Q'] =  { ':q!', '[]quit without saving' }
-map['g'] =  { ':LazyGit', '[] open lazygit'}
+map[' '] =  { '<Esc>', ' Close' }
+map['/'] =  { ':Commentary', ' Comment' }
+map['h'] =  { ':let @/ = ""', ' No Highlight Search' }
+map['q'] =  { ':q', ' Quit' }
+map['Q'] =  { ':q!', ' Quit Without Saving' }
+map['g'] =  { ':LazyGit', ' Open Lazygit'}
+map['c'] = ' Syntax Highlight'
+
 
 -- Buffer Mapping
-keymap('n', '<Leader>bD', ':bdelete<Space>', opts) 
-keymap('n', '<Leader>bg', ':buffers<Space>', opts) 
+keymap('n', '<Leader>bD', ':bdelete<Space>', opts)
+-- keymap('n', '<Leader>bg', ':buffers<Space>', opts)
 map.b   = {
-  name  = '[﬘]buffers',
-  [' '] = { '<Esc>', ' close' },
-  f     = { ':bfirst', ' first buffer' },
-  l     = { ':blast', ' last buffer' },
-  n     = { ':bnext', 'ﰴ next buffer' },
-  p     = { ':bprevious', 'ﰱ previous buffer' },
-  d     = { ':bdelete %', ' delete current buffer' },
-  g     = 'ﰷ go to buffer',
-  D     = ' delete(s)'
+  name  = '﬘ Buffers',
+  [' '] = { '<Esc>', ' Close' },
+  f     = { ':bfirst', ' First buffer' },
+  l     = { ':blast', ' Last buffer' },
+  n     = { ':bnext', ' Next Buffer' },
+  p     = { ':bprevious', ' Previous Buffer' },
+  d     = { ':bdelete %', ' delete current buffer' },
+  -- g     = ' Go To Buffer',
+  D     = '﫨Delete Buffer(s)'
 }
+
+-- Command Mode Mapping
+keymap('n', '<Leader>bD', ':bdelete<Space>', opts)
 
 -- File Mapping
 keymap('n' ,'<Leader>fe', ':e<SPACE>',opts)
 map.f   = {
-  name  = '[]file',
-  [' '] = { '<Esc>', ' close' },
-  W     = { ':wq', ' file write and exit' },
-  e     = 'ﱐ edit file(s)',
-  w     = { ':w', ' file write / save' },
--- \ 'x': [':CocCommand explorer', '况open explorer'],
+  name  = ' File',
+  [' '] = { '<Esc>', ' Close' },
+  W     = { ':wq', ' Write and Exit' },
+  e     = ' Edit file(s)',
+  w     = { ':w', ' Write' },
 }
 
 -- LSP
 map.l   = {
-  name  = 'lsp',
-  D     = 'declaration',
-  d     = 'definition',
-  h     = 'hover',
-  i     = 'implementation',
-  s     = 'signature help',
-  a     = 'add workspace folder',
-  R     = 'remove workspace folder',
-  l     = 'list workspace folder',
-  t     = 'type definition',
-  r     = 'rename',
-  F     = 'references',
-  e     = 'show line diagnostics',
-  p     = 'go to previous',
-  n     = 'go to next',
-  q     = 'set loc list',
-  f     = 'format',
+  name  = ' LSP',
+  D     = 'Declaration',
+  d     = 'Definition',
+  h     = 'Hover',
+  i     = 'Implementation',
+  s     = 'Signature Help',
+  a     = 'Add Workspace Folder',
+  R     = 'Remove Workspace Folder',
+  l     = 'List Workspace Folder',
+  t     = 'Type Definition',
+  r     = 'Rename',
+  F     = 'References',
+  e     = 'Show Line Diagnostics',
+  p     = 'Go to Previous',
+  n     = 'Go to Next',
+  q     = 'Set loc List',
+  f     = 'Format',
 }
+
+
+-- Insert map
+keymap('n' ,'<Leader>ip', '"+p',opts)
+map.i   = {
+  p     = ' Paste From Clipboard'
+}
+
 -- Motion (easy motio)
 map.m   = {
-  name  = '[ﮙ]motion',
-  [' '] = { '<Esc>', ' close' },
-  f     = { '<Plug>(easymotion-f)', 'ﮜ char forward' },
-}
--- Motion (easy motio)
-map.m   = {
-  name  = '[ﮙ]motion',
-  [' '] = { '<Esc>', ' close' },
-  f     = { '<Plug>(easymotion-f)', 'ﮜ char forward' },
-  F     = { '<Plug>(easymotion-F)', 'ﮜ char backward' },
-  t     = { '<Plug>(easymotion-t)', 'ﮜ before char forward' },
-  T     = { '<Plug>(easymotion-T)', 'ﮜ before char backward' },
+  name  = '省 Motion',
+  [' '] = { '<Esc>', ' Close' },
+  f     = { '<Plug>(easymotion-f)', 'Char Forward' },
+  F     = { '<Plug>(easymotion-F)', 'Char Backwards' },
+  t     = { '<Plug>(easymotion-t)', 'Before Char Forward' },
+  T     = { '<Plug>(easymotion-T)', 'Before Char Backwards' },
   w     = { '<Plug>(easymotion-w)', '  word forward' },
   W     = { '<Plug>(easymotion-W)', '  forward' },
   b     = { '<Plug>(easymotion-b)', '  word backward' },
@@ -140,42 +146,47 @@ map.m   = {
   E     = { '<Plug>(easymotion-E)', '  forward' },
   ge    = { '<Plug>(easymotion-ge)', '  word backward' },
   gE    = { '<Plug>(easymotion-gE)', '  WORD backward' },
-  j     = { '<Plug>(easymotion-j)', ' below' },
-  k     = { '<Plug>(easymotion-k)', ' above' },
-  n     = { '<Plug>(easymotion-n)', '怜next search forward' },
-  N     = { '<Plug>(easymotion-N)', '玲previous search backward' },
-  s     = { '<Plug>(easymotion-s)', ' search char forward and backward' }
+  j     = { '<Plug>(easymotion-j)', 'Below' },
+  k     = { '<Plug>(easymotion-k)', 'Above' },
+  n     = { '<Plug>(easymotion-n)', 'Next Search Forward' },
+  N     = { '<Plug>(easymotion-N)', 'Previous Search Backwards' },
+  s     = { '<Plug>(easymotion-s)', 'Search Char Forward and Backward' }
 }
 
 
 -- Plugin Mapping
 map.p = {
-  name    = '[]plugin',
-  [' '] = { '<Esc>', ' close' },
-  C     = { ':PackerComplie', ' Complie plugin(s)' },
-  c     = { ':PackerClean', 'ﮤ clean plugin(s)' },
-  i     = { ':PackerInstall', 'ﮣ install plugin(s)' },
-  u     = { ':PackerUpdate', 'ﮮ updated plugin(s)' },
-  s     = { ':PackerSync', ' Sync plugin(s)' },
+  name    = ' Plugin',
+  [' '] = { '<Esc>', ' Close' },
+  C     = { ':PackerComplie', 'Complie' },
+  c     = { ':PackerClean', 'Clean' },
+  i     = { ':PackerInstall', 'Install' },
+  u     = { ':PackerUpdate', 'Update' },
+  s     = { ':PackerSync', 'Sync' },
 }
 
--- Search Mapping
-keymap('n', '<Leader>sb', ':buffers<SPACE>', opts)
+-- Search Mapping:TODO: use telescope
 map.s   = {
-  name  = '[ﰍ]search',
-  [' '] = { '<Esc>', ' close' },
-  c     = { ':Commands', ' commands' },
-  f     = { ':Files', ' files' },
-  g     = { ':GFiles', ' git files' },
+  name  = 'ﰍ Search',
+  [' '] = { '<Esc>', ' Close' },
+  f     = { ':Telescope find_files', ' Files' },
+  g     = { ':Telescope live_grep', ' Live Grep' },
   G     = { ':GFiles?', ' modified git files' },
-  b     = '﬘ buffers',
-  B     = { ':Buffers', ' fzf buffers' },
+  b     = { ':Telescope buffers', ' Buffers' },
   l     = { ':BLines', ' lines buffer' },
   L     = { ':Lines', '靖lines' },
   r     = { ':Rg', 'ﳳ text' },
-  h     = { ':History', ' history' },
+  h     = { ':Telescope help_tags', ' Help tag' },
 }
 
+-- nvim-tree
+map.t   = {
+  name  = '滑Open File Tree',
+  [' '] = { '<Esc>', ' Close' },
+  t     = { ':NvimTreeToggle', 'Toggle' },
+  r     = { ':NvimTreeRefresh', 'Refresh' },
+  s     = { ':NvimTreeFindFile', 'Find / Search' },
+}
 
 
 

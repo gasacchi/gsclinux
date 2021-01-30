@@ -48,7 +48,7 @@ o.ignorecase = true
 o.smartcase = true
 
 -- Visual
-o.showmode = false
+vim.cmd('set noshowmode')
 
 -- ----------------------------------------------------------------------------
 -- Buffer Scope
