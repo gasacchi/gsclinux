@@ -13,12 +13,9 @@ compinit
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 
-# Rust
-export PATH=~/.cargo/bin:$PATH
 # Yarn
 export PATH="$(yarn global bin):$PATH"
 export PATH="$HOME/.local/.bin:$PATH"
-export PATH="$HOME/.emacs.d/bin:$PATH"
 
 
 eval "$(starship init zsh)"
