@@ -16,6 +16,8 @@ source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 # Yarn
 export PATH="$(yarn global bin):$PATH"
 export PATH="$HOME/.local/.bin:$PATH"
+export PATH="$HOME/.local/.bin/purescript:$PATH"
+export PATH="$HOME/.emacs.d/bin:$PATH"
 
 
 eval "$(starship init zsh)"
