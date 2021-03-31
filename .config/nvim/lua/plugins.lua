@@ -8,6 +8,7 @@ vim.cmd [[packadd packer.nvim]]
   -----------------------------------------------------------------------------
 
   -- LSP & Completion --------------------------------------------------------
+  -- TODO: use coc for now until Purescript lsp fixed
   use 'neovim/nvim-lspconfig'                  -- LSP config quickstart 
   use 'hrsh7th/nvim-compe'                     -- Completion  TODO: BUG
   -- use 'nvim-lua/completion-nvim'               -- Completion  

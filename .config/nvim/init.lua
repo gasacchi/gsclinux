@@ -25,4 +25,4 @@ require'config/goyo'
 
 
 -- LSP Configuration
-require'lsp/init'
+-- require'lsp/init'

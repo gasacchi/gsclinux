@@ -108,10 +108,6 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/gasacchi/.local/share/nvim/site/pack/packer/start/popup.nvim"
   },
-  ["psc-ide-vim"] = {
-    loaded = true,
-    path = "/home/gasacchi/.local/share/nvim/site/pack/packer/start/psc-ide-vim"
-  },
   sonokai = {
     loaded = true,
     path = "/home/gasacchi/.local/share/nvim/site/pack/packer/start/sonokai"

@@ -23,6 +23,7 @@ keymap('i', 'jk', '<ESC>', opts)
 -- Escape from command mode with jk
 keymap('c', 'jk', '<C-c>', opts)
 
+
 -- Map Leader to space
 local which_map_opts = { noremap = true, silent = true }
 g.mapleader = ' '
@@ -108,7 +109,7 @@ map.g   = {
   name  = ' Git',
   [' '] = { '<Esc>',                      ' Close' },
   h     = {
-    name = ' Hunk', -- TODO fix this!!!
+    name = ' Hunk', -- TODO Not working FIX this !!!
     [' '] = { '<Esc>', ' Close' },
     s = { ':lua require"gitsigns".stage_hunk()', ' Stage Hunk' },
     u = { ':lua require"gitsigns".undo_stage_hunk()', ' Unstage Hunk' },
@@ -155,19 +156,6 @@ map.m   = {
   C     = { ':HopChar2',                  '了 Hop Char 2' },
 } 
 
--- Code Action
-map.c   = { 
-  name  = ' Code Action',
-  [' '] = { '<Esc>',                      ' Close' },
-  D     = { ':lua vim.lsp.buf.declaration()', 'Declaration' },
-  H     = { ':lua vim.lsp.buf.signature_help()', 'Signature Help' },
-  d     = { ':lua vim.lsp.buf.definition()', 'Definition' },
-  h     = { ':lua vim.lsp.buf.hover()', 'hover' },
-  i     = { ':lua vim.lsp.buf.implementation()', 'implementation' },
-  n     = { ':lua vim.lsp.diagnostic.goto_next()', 'Diagnostic Next' },
-  p     = { ':lua vim.lsp.diagnostic.goto_prev()', 'Diagnostic Prev' },
-  r     = { ':lua vim.lsp.buf.references()', 'references' },
-}
 
 -- Window
 map.w = {
