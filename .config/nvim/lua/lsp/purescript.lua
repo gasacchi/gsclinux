@@ -1,0 +1,1 @@
+-- ps = require'lspconfig'.purescriptls
