@@ -115,19 +115,16 @@ map.e   = {
 map.g   = {
   name  = ' Git',
   [' '] = { '<Esc>',                      ' Close' },
-  h     = {
-    name = ' Hunk', -- TODO Not working FIX this !!!
-    [' '] = { '<Esc>', ' Close' },
-    s = { ':lua require"gitsigns".stage_hunk()', ' Stage Hunk' },
-    u = { ':lua require"gitsigns".undo_stage_hunk()', ' Unstage Hunk' },
-    R = { ':lua require"gitsigns".reset_buffer()', '﬘ Reset Buffer' },
-    r = { ':lua require"gitsigns".reset_hunk()', '痢Reset Hunk' },
-    P = { ':lua require"gitsigns".preview_hunk()', ' Preview Hunk' },
-    b = { ':lua require"gitsigns".blame_line()', ' Blame Line' },
-    p = { ':lua require\"gitsigns\".prev_hunk()', '玲Previous Hunk' },
-    n = { ':lua require\"gitsigns\".next_hunk()', '怜Next Hunk' },
-
-  }
+  g =  ' Neogit',
+  c =  ' Commit',
+  s =  ' Stage Hunk',
+  u =  ' Unstage Hunk',
+  R =  '﬘ Reset Buffer',
+  r =  '痢Reset Hunk',
+  P =  ' Preview Hunk',
+  b =  ' Blame Line',
+  p =  '玲Previous Hunk',
+  n =  '怜Next Hunk'
 }
 
 -- File Mapping
