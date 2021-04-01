@@ -24,6 +24,7 @@ require'config/nvimtree'
 require'config/colorizer'
 require'config/minimap'
 require'config/goyo'
+require'config/neogit'
 
 
 -- LSP Configuration

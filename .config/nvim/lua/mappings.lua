@@ -67,7 +67,7 @@ map.b   = {
   p     = { ':BufferLineCyclePrev',       ' Previous Buffer' },
 }
 
-map.s   = {
+map.s   = { -- TODO: mapping all Telescope functions
   name  = ' Search',
   [' '] = { '<Esc>',                      ' Close' },
   ['.'] = { ':Telescope live_grep',       ' Live Grep' },
@@ -111,12 +111,12 @@ map.e   = {
   z     = { ':Goyo',                      ' Zen Mode' },
 }
 
--- Git TODO: Neogit 
+-- Git TODO: Still Cannot Commiting Neogit Bug
 map.g   = {
   name  = ' Git',
-  [' '] = { '<Esc>',                      ' Close' },
-  g =  ' Neogit',
-  c =  ' Commit',
+  [' '] = { '<Esc>',                                   ' Close' },
+  g = { ':lua require"neogit".open{ kind = "split" }', ' Neogit'},
+  c = { ':Neogit commit',                              ' Commit'},
   s =  ' Stage Hunk',
   u =  ' Unstage Hunk',
   R =  '﬘ Reset Buffer',
