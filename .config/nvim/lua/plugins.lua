@@ -8,11 +8,9 @@ vim.cmd [[packadd packer.nvim]]
   -----------------------------------------------------------------------------
 
   -- LSP & Completion --------------------------------------------------------
-  -- TODO: use coc for now until Purescript lsp fixed
   use 'neovim/nvim-lspconfig'                  -- LSP config quickstart 
-  use 'hrsh7th/nvim-compe'                     -- Completion  TODO: BUG
-  -- use 'nvim-lua/completion-nvim'               -- Completion  
-  -- use 'onsails/lspkind-nvim' -- LSP kind icons like vscode  TODO: Purescript icon 
+  use 'hrsh7th/nvim-compe'                     -- Completion  
+  use 'onsails/lspkind-nvim' -- LSP kind icons like vscode  TODO: Purescript icon 
   -- use 'kosayoda/nvim-lightbulb' TODO: Fix LSP first 
   -- use 'glepnir/lspsaga.nvim' TODO 
   
@@ -37,7 +35,6 @@ vim.cmd [[packadd packer.nvim]]
   -- use 'markdown-preview.nvim'               -- Markdown Preview TODO
   -- euclio/vim-markdown-composer
   -- use 'akinsho/nvim-toggleterm.lua'         -- Terminal TODO
-  -- use 'svermeulen/nvim-moonmaker'
   -----------------------------------------------------------------------------
 
   -- UI -----------------------------------------------------------------------

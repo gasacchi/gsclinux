@@ -60,6 +60,10 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/gasacchi/.local/share/nvim/site/pack/packer/start/kommentary"
   },
+  ["lspkind-nvim"] = {
+    loaded = true,
+    path = "/home/gasacchi/.local/share/nvim/site/pack/packer/start/lspkind-nvim"
+  },
   ["lualine.nvim"] = {
     loaded = true,
     path = "/home/gasacchi/.local/share/nvim/site/pack/packer/start/lualine.nvim"

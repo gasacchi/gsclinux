@@ -23,6 +23,13 @@ keymap('i', 'jk', '<ESC>', opts)
 -- Escape from command mode with jk
 keymap('c', 'jk', '<C-c>', opts)
 
+-- purescript Unicode shortcut
+cmd'autocmd FileType purescript inoremap <buffer> ;l ∀'
+cmd'autocmd FileType purescript inoremap <buffer> ;h ∷'
+cmd'autocmd FileType purescript inoremap <buffer> ;d ←'
+cmd'autocmd FileType purescript inoremap <buffer> ;t →'
+cmd'autocmd FileType purescript inoremap <buffer> ;c ⇒'
+cmd'autocmd FileType purescript inoremap <buffer> ;i ⇐'
 
 -- Map Leader to space
 local which_map_opts = { noremap = true, silent = true }
