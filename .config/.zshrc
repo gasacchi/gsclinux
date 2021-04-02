@@ -30,7 +30,7 @@ alias lla="ls -la"
 alias gscadd="doas xbps-install -Sy"
 alias gscsearch="xbps-query -Rs"
 alias gscdel="doas xbps-remove -R"
-alias v='neovide --multiGrid'
+alias v=nvim
 
 # Rust utility
 alias cp='cp -v'
