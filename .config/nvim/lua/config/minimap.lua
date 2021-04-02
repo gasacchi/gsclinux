@@ -1,4 +1,12 @@
-vim.g.minimap_width = 15
-vim.g.minimap_block_filetypes = { 'tagbar', 'NvimTree' }
-vim.g.minimap_close_filetypes = { 'dashboard', 'netrw', 'packer' }
--- vim.g.minimap_highlight_range = true
+local g
+g = vim.g
+g.minimap_width = 15
+g.minimap_block_filetypes = {
+  'tagbar',
+  'NvimTree'
+}
+g.minimap_close_filetypes = {
+  'dashboard',
+  'netrw',
+  'packer'
+}

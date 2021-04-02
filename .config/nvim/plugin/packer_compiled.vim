@@ -92,6 +92,10 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/gasacchi/.local/share/nvim/site/pack/packer/start/nvim-lspconfig"
   },
+  ["nvim-moonmaker"] = {
+    loaded = true,
+    path = "/home/gasacchi/.local/share/nvim/site/pack/packer/start/nvim-moonmaker"
+  },
   ["nvim-tree.lua"] = {
     loaded = true,
     path = "/home/gasacchi/.local/share/nvim/site/pack/packer/start/nvim-tree.lua"

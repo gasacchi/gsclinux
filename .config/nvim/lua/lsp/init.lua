@@ -1,16 +1,27 @@
-local cmd = vim.cmd
-
-local ps = require'lspconfig'.purescriptls
-
-
-cmd 'set completeopt=menuone,noinsert,noselect'
-
-local on_attach = function(client, bufnr)
-  local function buf_set_keymap(...) vim.api.nvim_buf_set_keymap(bufnr, ...) end
-  local function buf_set_option(...) vim.api.nvim_buf_set_option(bufnr, ...) end
-
-  -- Mappings.
-  local opts = { noremap=true, silent=true }
+local cmd
+cmd = vim.cmd
+local nvim_buf_set_keymap, nvim_buf_set_option, nvim_exec
+do
+  local _obj_0 = vim.api
+  nvim_buf_set_keymap, nvim_buf_set_option, nvim_exec = _obj_0.nvim_buf_set_keymap, _obj_0.nvim_buf_set_option, _obj_0.nvim_exec
+end
+local purescriptls
+purescriptls = require("lspconfig").purescriptls
+cmd('set completeopt=menuone,noinsert,noselect')
+local on_attach
+on_attach = function(client, bufnr)
+  local buf_set_keymap
+  buf_set_keymap = function(...)
+    return nvim_buf_set_keymap(bufnr, ...)
+  end
+  local buf_set_option
+  buf_set_option = function(...)
+    return nvim_buf_set_option(bufnr, ...)
+  end
+  local opts = {
+    noremap = true,
+    silent = true
+  }
   buf_set_keymap('n', '<leader>lD', '<Cmd>lua vim.lsp.buf.declaration()<CR>', opts)
   buf_set_keymap('n', '<leader>ld', '<Cmd>lua vim.lsp.buf.definition()<CR>', opts)
   buf_set_keymap('n', '<leader>lh', '<Cmd>lua vim.lsp.buf.hover()<CR>', opts)
@@ -26,29 +37,15 @@ local on_attach = function(client, bufnr)
   buf_set_keymap('n', '<leader>lp', '<cmd>lua vim.lsp.diagnostic.goto_prev()<CR>', opts)
   buf_set_keymap('n', '<leader>ln', '<cmd>lua vim.lsp.diagnostic.goto_next()<CR>', opts)
   buf_set_keymap('n', '<leader>ls', '<cmd>lua vim.lsp.diagnostic.set_loclist()<CR>', opts)
-
-  -- Set some keybinds conditional on server capabilities
   if client.resolved_capabilities.document_formatting then
     buf_set_keymap("n", "<leader>cf", "<cmd>lua vim.lsp.buf.formatting()<CR>", opts)
   elseif client.resolved_capabilities.document_range_formatting then
     buf_set_keymap("n", "<leader>cF", "<cmd>lua vim.lsp.buf.range_formatting()<CR>", opts)
   end
-
-  -- Set autocommands conditional on server_capabilities
   if client.resolved_capabilities.document_highlight then
-    vim.api.nvim_exec([[
-      hi LspReferenceRead cterm=bold ctermbg=red guibg=LightYellow
-      hi LspReferenceText cterm=bold ctermbg=red guibg=LightYellow
-      hi LspReferenceWrite cterm=bold ctermbg=red guibg=LightYellow
-      augroup lsp_document_highlight
-        autocmd! * <buffer>
-        autocmd CursorHold <buffer> lua vim.lsp.buf.document_highlight()
-        autocmd CursorMoved <buffer> lua vim.lsp.buf.clear_references()
-      augroup END
-    ]], false)
+    return nvim_exec(" \n      hi LspReferenceRead cterm=bold ctermbg=red guibg=LightYellow\n      hi LspReferenceText cterm=bold ctermbg=red guibg=LightYellow\n      hi LspReferenceWrite cterm=bold ctermbg=red guibg=LightYellow\n      augroup lsp_document_highlight\n        autocmd! * <buffer>\n        autocmd CursorHold <buffer> lua vim.lsp.buf.document_highlight()\n        autocmd CursorMoved <buffer> lua vim.lsp.buf.clear_references()\n      augroup END\n    ", false)
   end
 end
-
-ps.setup { on_attach = on_attach }
-
-
+return purescriptls.setup({
+  on_attach = on_attach
+})

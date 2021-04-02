@@ -1,34 +1,31 @@
--- ----------------------------------------------------------------------------
--- UI
--- ----------------------------------------------------------------------------
-
-local cmd = vim.cmd
-local o = vim.o
-local g = vim.g
-
--- true color support
+local cmd, g, o
+do
+  local _obj_0 = vim
+  cmd, g, o = _obj_0.cmd, _obj_0.g, _obj_0.o
+end
+require("lualine")
+require("bufferline")
 cmd("set termguicolors")
-
--- cmd('highlight Normal guibg=NONE ctermbg=NONE')
-
-g.sonokai_style = 'andromeda'                                                                                                             
+g.sonokai_style = "andromeda"
 g.sonokai_enable_italic = 1
-vim.cmd("colo sonokai")
-
-require('lualine').setup{
-  options = { 
-    theme = 'nightfly',
-    section_separators = {'', ''},
-    component_separators = {'::', '::'}
+cmd("colo sonokai")
+local lualine_setup = {
+  options = {
+    theme = "nightfly",
+    section_separators = {
+      "",
+      ""
+    },
+    component_separators = {
+      "::",
+      "::"
+    }
   }
 }
-
-require'bufferline'.setup{
+local bufferline_setup = {
   options = {
     separator_style = "slant"
   }
 }
-
--- ----------------------------------------------------------------------------
--- EOF
--- ----------------------------------------------------------------------------
+require("lualine").setup(lualine_setup)
+require("bufferline").setup(bufferline_setup)
