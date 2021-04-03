@@ -18,6 +18,7 @@ export PATH="$(yarn global bin):$PATH"
 export PATH="$HOME/.local/.bin:$PATH"
 export PATH="$HOME/.local/.bin/purescript:$PATH"
 export PATH="$HOME/.emacs.d/bin:$PATH"
+export NVIM_ROOT="$HOME/.config/nvim"
 
 
 eval "$(starship init zsh)"
