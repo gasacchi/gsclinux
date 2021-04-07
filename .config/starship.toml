@@ -2,22 +2,40 @@
 add_newline = false
 
 [character]
-format = "$symbol[::](bold fg:#80E544)"
-success_symbol = "[  ](bold fg:#8ec07c)" 
-error_symbol = "[  ](bold fg:#fb4934)"
-vicmd_symbol = "[  ](bold fg:#b8bb26)"
+format = "$symbol [do ](fg:#CCFA9D) \n[··](fg:#A253BD) "
+success_symbol = "[Cﬦ<<](bold fg:#FB9EF8)" 
+error_symbol = "[Cﬦ<<](bold fg:#FF334E)"
+vicmd_symbol = "[  ](bold fg:#AD9DFA)"
+
+# Battery Module
+[battery]
+full_symbol = ""
+charging_symbol = ""
+discharging_symbol = ""
+
+[[battery.display]] 
+threshold = 10
+style = "bold #FF334E"
+
+[[battery.display]]
+threshold = 20
+style = "bold #FEEF9A"
+
+# Directory Module
+[directory]
+style = "bold #6E98D3"
+truncation_length = 3
+truncation_symbol = "_/"
+read_only = "  "
+read_only_style = "#FF334E"
+
+# Purescript Module
+[purescript]
+format = "via [$symbol$version](bold #A253BD)"
 
 [package]
 format = "via [ $version](208 bold) "
 
 [lua]
-format = "via [](bold fg:#0000ff) [$version](bold blue)"
+format = "via [](bold fg:#6E98D3) [$version](bold blue)"
 
-[rust]
-format = "via [ $version](red bold)"
-
-[crystal]
-format = "via [ $version](black bold)"
-
-[ocaml]
-format = "via [ $version](208 bold) "
