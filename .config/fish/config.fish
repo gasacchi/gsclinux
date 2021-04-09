@@ -1,7 +1,7 @@
 # Hide welcome message
 set fish_greeting
 # Yarn
-set -gx PATH "(yarn global bin):$PATH"
+set -gx PATH "$HOME/.yarn/bin:x:$PATH"
 set -gx PATH "$HOME/.local/bin:$PATH"
 set -gx NVIM_ROOT "$HOME/.config/nvim"
 
