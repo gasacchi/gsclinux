@@ -19,27 +19,27 @@
  */
 
 /* appearance */
-static const unsigned int borderpx          = 2;        /* border pixel of windows */
+static const unsigned int borderpx          = 1;        /* border pixel of windows */
 static const unsigned int snap              = 32;       /* snap pixel */
 static const int showbar                    = 1;        /* 0 means no bar */
-static const int topbar                     = 1;        /* 0 means bottom bar */
+static const int topbar                     = 0;        /* 0 means bottom bar */
 static const char *fonts[]                  = {
   "Hasklug Nerd Font:size=9",
 };
-static const char dmenufont[]               = "Hasklug Nerd Font:size=9";
+static const char dmenufont[]               = "Hasklug Nerd Font:size=8";
 /* background color */
 static const char col_bg[]                  = "#0D070D"; 
 /* inactive border color */
-static const char col_border_inactive[]     = "#1B0E1B";
+static const char col_border_inactive[]     = "#0D070D";
 /* font color */
-static const char col_fg[]                  = "#FB9DF8"; 
+static const char col_fg[]                  = "#A253BD"; 
 
 /* top bar second color */
-static const char col_bg_second[]           = "#FB9DF8"; 
+static const char col_bg_second[]           = "#1B0E1B"; 
 static const char *colors[][3]              = {
   /*               fg         bg         border   */
   [SchemeNorm] = { col_fg, col_bg, col_border_inactive },
-  [SchemeSel]  = { col_bg, col_bg_second,  col_fg  },
+  [SchemeSel]  = { col_fg, col_bg_second,  col_fg  },
 };
 
 /* tagging */
@@ -53,8 +53,8 @@ static const Rule rules[] = {
   /* class      instance    title       tags mask     isfloating   monitor */
   /* { "Gimp",     NULL,       NULL,       0,            1,           -1 }, */
   { "Chromium",  NULL,       NULL,       1 << 1,       0,           -1 },
-  { "obs",  NULL,       NULL,       1 << 2,       0,           -1 },
-  { "kdenlive",  NULL,       NULL,       1 << 2,       0,           -1 },
+  // { "obs",  NULL,       NULL,       1 << 2,       0,           -1 },
+  // { "kdenlive",  NULL,       NULL,       1 << 2,       0,           -1 },
   { "vlc",  NULL,       NULL,       1 << 2,       0,           -1 },
 
   /* if there is no rule for app */
@@ -68,13 +68,13 @@ static const int resizehints = 1;    /* 1 means respect size hints in tiled resi
 
 static const Layout layouts[] = {
   /* symbol     arrange function */
-  { "  ",      tile },    /* first entry is default */
-  { "  ",      NULL },    /* no layout function means floating behavior */
+  { "  ",        tile },    /* first entry is default */
+  { "  ",        NULL },    /* no layout function means floating behavior */
   { "[M]  ",      monocle },
 };
 
 /* key definitions */
-#define MODKEY Mod4Mask
+#define MODKEY Mod1Mask
 #define TAGKEYS(KEY,TAG) \
   { MODKEY,                       KEY,      view,           {.ui = 1 << TAG} }, \
   { MODKEY|ControlMask,           KEY,      toggleview,     {.ui = 1 << TAG} }, \
@@ -87,14 +87,14 @@ static const Layout layouts[] = {
 
 /* commands */
 static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() */
-static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont, "-nb", col_bg, "-nf", col_fg, "-sb", col_bg_second, "-sf", col_bg, NULL };
-static const char *termcmd[]  = { "alacritty", NULL };
+static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont, "-nb", col_bg, "-nf", col_fg, "-sb", col_bg_second, "-sf", col_fg, NULL };
+static const char *termcmd[]  = { "kitty", NULL };
 
 static Key keys[] = {
   /* modifier                     key        function        argument */
 
   /* set mod+d to exec dmenu */
-  { MODKEY,                       XK_d,      spawn,          {.v = dmenucmd } },
+  { MODKEY,                       XK_s,      spawn,          {.v = dmenucmd } },
   /* set mod+return to exec st terminal */
   { MODKEY,                       XK_Return, spawn,          {.v = termcmd } },
   /* set mod+b to toggle bar*/
@@ -106,7 +106,7 @@ static Key keys[] = {
   /* set mod+l to inc windows on master*/
   { MODKEY,                       XK_i,      incnmaster,     {.i = +1 } },
   /* set mod+d to dec windows on master*/
-  { MODKEY|ShiftMask,             XK_d,      incnmaster,     {.i = -1 } },
+  { MODKEY,                       XK_d,      incnmaster,     {.i = -1 } },
   /* set mod+h dec window size*/
   { MODKEY,                       XK_h,      setmfact,       {.f = -0.05} },
   /* set mod+l inc window size*/
@@ -116,9 +116,11 @@ static Key keys[] = {
   /* set mod+tab view other tag */
   { MODKEY,                       XK_Tab,    view,           {0} },
   /* set mod+shift+q to kill program */
-  { MODKEY|ShiftMask,             XK_q,      killclient,     {0} },
+  { MODKEY|ShiftMask,             XK_c,      killclient,     {0} },
+
   /* set mod+t to switch to tiling mode */
   { MODKEY,                       XK_t,      setlayout,      {.v = &layouts[0]} },
+
   /* set mod+f to switch to float mode */
   { MODKEY,                       XK_f,      setlayout,      {.v = &layouts[1]} },
   /* set mod+m to switch to monocle mode */
@@ -138,7 +140,7 @@ static Key keys[] = {
   TAGKEYS(                        XK_3,                      2)
   TAGKEYS(                        XK_4,                      3)
   TAGKEYS(                        XK_5,                      4)
-  { MODKEY|ShiftMask,             XK_e,      quit,           {0} },
+  { MODKEY|ShiftMask,             XK_q,      quit,           {0} },
   
   /* keyXF86 */
   { 0,                            XF86XK_AudioMute,                    spawn,                     SHCMD("pamixer -t --sink 1; kill -44 $(pidof dwmblocks)") },
