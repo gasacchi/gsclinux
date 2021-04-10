@@ -11,13 +11,23 @@ alias ls='exa'
 alias ll="ls -l"
 alias la="ls -a"
 alias lla="ls -la"
+
+# System
 alias gscupdate="doas xbps-install -Suv"
 alias gscadd="doas xbps-install -Sy"
 alias gscsearch="xbps-query -Rs"
 alias gscdel="doas xbps-remove -R"
+
+# Editor
 alias v=nvim
 
-# Rust utility
+# Tmux
+alias tm='tmux new-session -s'
+alias tmk='tmux kill-session -t'
+alias tml='tmux ls'
+alias tma='tmux attach-session -t'
+
+# Command Line utility
 alias cp='cp -v'
 alias mv='mv -v'
 alias rm='rm -v'
