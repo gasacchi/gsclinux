@@ -3,8 +3,8 @@ add_newline = false
 
 [character]
 format = "$symbol [do ](fg:#CCFA9D) \n[··](fg:#A253BD) "
-success_symbol = "[Cﬦ<<](bold fg:#FB9EF8)" 
-error_symbol = "[Cﬦ<<](bold fg:#FF334E)"
+success_symbol = "[](bold fg:#FB9EF8)" 
+error_symbol = "[](bold fg:#FF334E)"
 vicmd_symbol = "[  ](bold fg:#AD9DFA)"
 
 # Battery Module
