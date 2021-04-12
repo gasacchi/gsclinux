@@ -32,6 +32,7 @@ read_only_style = "#FF334E"
 # Purescript Module
 [purescript]
 format = "via [$symbol$version](bold #A253BD)"
+symbol = "<≡> "
 
 [package]
 format = "via [ $version](208 bold) "
