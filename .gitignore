@@ -12,9 +12,9 @@ autoload/
 plugged/
 yarn/
 configstore/
-lazygit/
+lazygit/*
 obs-studio/
-nitrogen
+nitrogen/*
 nextjs-nodejs/
 lua/
 # Emacs
