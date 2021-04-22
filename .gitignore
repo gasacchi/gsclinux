@@ -12,7 +12,6 @@ autoload/
 plugged/
 yarn/
 configstore/
-lazygit/*
 obs-studio/
 nitrogen/*
 nextjs-nodejs/

@@ -1,9 +1,12 @@
 lastupdatecheck: 0
 recentrepos:
+- /home/gasacchi/.dev/github/gsclinux
+- /home/gasacchi/.dev/learn/purescript
+- /home/gasacchi/.config/nvim
 - /home/gasacchi/xxx/.dev/github/gsclinux
 - /home/gasacchi/xxx/.dev/learn
 - /home/gasacchi/xxx/.dev/gsclinux
 - /home/gasacchi/xxx/.dev/clone/neovide
 - /home/gasacchi/xxx/.dev/clone/lua-language-server
 - /home/gasacchi/xxx/.dev/github/yuno.nvim
-startuppopupversion: 3
+startuppopupversion: 4
