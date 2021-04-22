@@ -17,6 +17,8 @@ alias gscupdate="doas xbps-install -Suv"
 alias gscadd="doas xbps-install -Sy"
 alias gscsearch="xbps-query -Rs"
 alias gscdel="doas xbps-remove -R"
+alias gscoff="doas poweroff"
+alias gscreboot="doas reboot"
 
 # Editor
 alias v=nvim
