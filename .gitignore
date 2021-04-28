@@ -17,3 +17,4 @@ nitrogen/*
 nextjs-nodejs/
 lua/
 TabNine/
+.tmux/
