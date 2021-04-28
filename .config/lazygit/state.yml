@@ -1,8 +1,9 @@
 lastupdatecheck: 0
 recentrepos:
+- /home/gasacchi/.dev/github/learn
+- /home/gasacchi/.config/nvim
 - /home/gasacchi/.dev/github/gsclinux
 - /home/gasacchi/.dev/learn/purescript
-- /home/gasacchi/.config/nvim
 - /home/gasacchi/xxx/.dev/github/gsclinux
 - /home/gasacchi/xxx/.dev/learn
 - /home/gasacchi/xxx/.dev/gsclinux
