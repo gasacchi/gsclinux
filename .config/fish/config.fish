@@ -25,7 +25,8 @@ alias gscreboot="doas reboot"
 alias v=nvim
 
 # Tmux
-alias tm='tmux new-session -s'
+alias tm='tmux'
+alias tmn='tmux new-session -s'
 alias tmk='tmux kill-session -t'
 alias tml='tmux ls'
 alias tma='tmux attach-session -t'
