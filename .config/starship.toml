@@ -34,6 +34,10 @@ read_only_style = "#FF334E"
 format = "via [$symbol$version](bold #A253BD)"
 symbol = "<≡> "
 
+[ocaml]
+format = "via [$symbol$version](bold fg:#FF334E)"
+symbol = "r "
+
 [package]
 format = "via [ $version](208 bold) "
 
