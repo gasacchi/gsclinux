@@ -8,6 +8,7 @@
 ### Personal Development Tools
 - neovim-nightly-bin (nightly build neovim)
 - kitty (terminal emulator)
+- tmux
 
 ### AUR Helper
 
@@ -30,6 +31,9 @@
     - run `yay --sudo doas --sudoflags -- --save`
 - wget / uget (download files)
 - unzip & unrar (unzip or unrar .rar and .zip files)
+
+#### Command line utils
+- exa (ls alt)
 
 ### Fonts
 ```sh
