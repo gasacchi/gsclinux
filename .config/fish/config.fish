@@ -3,6 +3,7 @@ set fish_greeting
 # Yarn
 set -gx PATH "$HOME/.yarn/bin:$PATH"
 set -gx PATH "$HOME/.local/bin:$PATH"
+set -gx PATH "$HOME/.dotnet/tools:$PATH"
 set -gx NVIM_ROOT "$HOME/.config/nvim"
 
 
@@ -12,14 +13,8 @@ alias ll="ls -l"
 alias la="ls -a"
 alias lla="ls -la"
 
-# System
-alias gscupdate="doas xbps-install -Suv"
-alias gscadd="doas xbps-install -Sy"
-alias gscsearch="xbps-query -Rs"
-alias gscdel="doas xbps-remove -R"
-alias gscclean="doas xbps-remove -Oo"
-alias gscoff="doas poweroff"
-alias gscreboot="doas reboot"
+# System Pacman & Yay
+
 
 # editor
 alias v='nvim'
